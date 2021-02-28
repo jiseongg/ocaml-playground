@@ -1,6 +1,14 @@
 
-module BST =
-  struct
+module BST : sig
+    type key = int
+    type 'a btree
+    val empty : 'a btree
+    val insert : 'a btree -> key -> 'a -> 'a btree
+    val find : key -> 'a btree -> 'a
+    exception Bst_is_empty
+    exception Not_found
+  end
+  = struct
     type key = int
     type 'a btree = Empty | Node of key * 'a * 'a btree * 'a btree
     let empty = Empty
