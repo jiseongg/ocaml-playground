@@ -105,3 +105,10 @@ tags
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/ocaml,macos,linux,vim,vscode
+
+
+# ocamlyacc, ocamllex
+lexer.ml
+lexer.mli
+parser.ml
+parser.mli
