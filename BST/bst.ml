@@ -1,6 +1,5 @@
-open! Btree
 
-module BST : BTree = struct
+module BST = struct
   type key = int
   type 'a btree = Empty | Node of key * 'a * 'a btree * 'a btree
   let empty = Empty
