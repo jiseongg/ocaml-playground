@@ -3,15 +3,15 @@ open OrderedTypes
 
 module type SET = 
   functor (Elt: ORDERED_TYPE) ->
-    sig
+    (sig
       type element
       type set
       val empty : set
       val add : element -> set -> set
       val member : element -> set -> bool
-    end
+    end with type element = Elt.t)
 
-module AbstractSet_L =
+module AbstractSet_L : SET =
   functor (Elt: ORDERED_TYPE) ->
     struct
       type element = Elt.t
@@ -33,4 +33,4 @@ module AbstractSet_L =
               Equal -> true
             | Less -> false
             | Greater -> member x tl
-    end
+    end;;

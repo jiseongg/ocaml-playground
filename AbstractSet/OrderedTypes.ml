@@ -7,12 +7,11 @@ module type ORDERED_TYPE =
     val compare: t -> t -> comparison
   end
 
-module OrderedString : ORDERED_TYPE =
+module OrderedString : ORDERED_TYPE with type t = string =
   struct
     type t = string
     let compare x y = 
       if x = y then Equal
       else if x < y then Less
       else Greater
-  end;;
-
+  end

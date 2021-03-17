@@ -7,4 +7,4 @@ module type ORDERED_TYPE =
     val compare: t -> t -> comparison
   end
 
-module OrderedString : ORDERED_TYPE
+module OrderedString : ORDERED_TYPE with type t = string
