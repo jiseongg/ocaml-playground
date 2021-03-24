@@ -1,0 +1,6 @@
+; This declares the hello_world executable
+; implemented by hello_world.ml to be built
+; as native (.exe) or byte-code (.bc) version
+(executable
+ (name hello_world)
+ (modes byte native))

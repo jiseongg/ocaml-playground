@@ -1,0 +1,8 @@
+; This declares the hello_world_lwt executable
+; implemented by hello_world_lwt.ml using lwt.unix
+; library, to be built as native (.exe) or byte-code
+; (.bc) version
+(executable
+ (name hello_world_lwt)
+ (libraries lwt.unix)
+ (modes byte native))
